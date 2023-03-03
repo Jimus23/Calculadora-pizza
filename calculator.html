@@ -6,7 +6,6 @@
     <title>Pizza Calculator</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/style-calculator.css'>
-    <script src='js/js-calculator.js'></script>
 </head>
 <body>
     <div class="wrapper">
@@ -17,11 +16,59 @@
                 <h1>PIZZA CALCULATOR</h1>
             </div>
 
-            <div>
-                Weight:
+            <form class="ingredients-container">
+
+                <div class="form-row">
+                    <label for="number-of-pizzas">Number of pizzas:</label> 
+                    <input type="number" id="number-of-pizzas" value="1">
+                </div>
+
+                <div class="form-row">
+                    <label for="weight">Weight (gr):</label> 
+                    <input type="number" id="weight" value="250">
+                </div>
+
+                <div class="form-row">
+                    <label for="hydration">Hydration (%):</label> 
+                    <input type="number" id="hydration" value="60">
+                </div>
+
+                <div class="form-row">
+                    <label for="salt">Salt (%):</label> 
+                    <input type="number" id="salt" value="3.3">
+                </div>
+
+                <div class="form-row">
+                    <span>
+                        <input type="checkbox" id="checkPoolish" onclick="showPoolish()">
+                        <label for="poolish">Poolish:</label> 
+                    </span>
+                    <input type="number" id="poolish" value="40">  
+                </div>
+
+                <div class="form-row center">
+                    <button type="button" id="calculate" onclick="pizza()">Calculate</button>
+                </div>
+
+            </form>
+
+            <div class="measures-container" id="directMix">
+                <div>Flour: <span id="totalFlour">0</span>gr</div>
+                <div>Water: <span id="totalWater">0</span>gr</div>
+                <div>Yeast: <span id="totalYeast">0</span>gr</div>
+                <div>Salt: <span id="totalSalt">0</span>gr</div>
             </div>
+
+            <!-- <div class="measures-container" id="poolishMix">
+                <div>Flour: <span id="totalFlour">0</span>gr</div>
+                <div>Water: <span id="totalWater">0</span>gr</div>
+                <div>Yeast: <span id="totalYeast">0</span>gr</div>
+                <div>Salt: <span id="totalSalt">0</span>gr</div>
+            </div> -->
+
         </div>
     </div>
 
+    <script src='js/js-calculator.js'></script>
 </body>
 </html>
