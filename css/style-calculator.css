@@ -9,6 +9,10 @@ body, html{
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+h3{
+    margin: 0;
+}
+
 .wrapper{
     background: #100A09 url(../images/nik-owens-40OJLYVWeeM-unsplash.jpg) no-repeat;
     background-size: cover;
@@ -53,6 +57,8 @@ body, html{
     /* align-items: center; */
     justify-content: center;
     gap: 1.1rem;
+    -webkit-transition: 10s;
+    transition: 10s;
 }
 
 .form-row{
@@ -112,8 +118,8 @@ input::-webkit-inner-spin-button {
     justify-content: center;
 }
 
-.measures-container{
-    display: flex;
+#directMix{
+    display: none;
     /* align-items: center; */
     justify-content: space-around;
     flex-direction: row;
@@ -121,7 +127,23 @@ input::-webkit-inner-spin-button {
     gap: 1rem;
 }
 
-.measures-container div{
+#directMix div{
     width: 40%;
     /* background-color: #3BBCB0; */
 }
+
+#poolishMix{
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    gap: .1rem;
+    /* background: #3BBCB0; */
+    width: 80%;
+}
+
+.poolish-container{
+    /* background: violet; */
+    width: 40%;
+}
+
